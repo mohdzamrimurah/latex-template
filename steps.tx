@@ -1,0 +1,8 @@
+<edit>
+git add <>
+git commit -m "log"
+git push -u origin master
+
+
+## master is https://github.com/mohdzamrimurah/latex-template
+
