@@ -9,20 +9,25 @@
 
 \usepackage{graphicx}
 
-%% use xelatex
-%
-%\usepackage{fontspec}
-%\usepackage{unicode-math}
-%\setmainfont{Times New Roman}
-%\setmathfont{Cambria Math}
-%\setsansfont{Arial}
-
+\RequirePackage{ifxetex}
+\ifxetex
+\RequirePackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Ligatures=TeX}
+\RequirePackage{unicode-math}
+\setmathfont{Cambria Math}
+\setmonofont{Source Code Pro}
+\setmainfont{Minion Pro}
+\setsansfont{Myriad Pro}
+\else
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{newtxtext}
 \RequirePackage{newtxmath}
 \RequirePackage{helvet}
-\RequirePackage{times}
+\fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,7 +186,7 @@
 \renewcommand{\includegraphics}[1]{\ts@includegraphics[width=\checkGraphicsWidth]{#1}}
 \AtBeginDocument{\def\includegraphics{\@ifnextchar[{\ts@includegraphics}{\ts@includegraphics[width=\checkGraphicsWidth,height=\checkGraphicsHeight,keepaspectratio]}}}
 
-\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+%\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
 
 \def\URL#1#2{\@ifundefined{href}{#2}{\href{#1}{#2}}}
 
@@ -348,10 +353,15 @@ nibh eu nibh maximus pretium. Ut est turpis, condimentum et arcu quis,
 ornare feugiat nisl. Cras maximus varius massa, nec placerat nibh rutrum
 id. Curabitur quis lectus lectus.
 
-\begin{figure}
-\includegraphics{read-braille.jpg}
-\end{figure}
-
+\bgroup
+\fixFloatSize{images/read-braille.jpg}
+\begin{figure*}[!htbp]
+\centering 
+\includegraphics{images/read-braille.jpg}
+\caption{{Reading Braille}}
+\label{f-056fed0128b2}
+\end{figure*}
+\egroup
     
 \section*{Conclusion}
 Morbi eleifend nibh euismod turpis convallis auctor. Phasellus sed interdum
