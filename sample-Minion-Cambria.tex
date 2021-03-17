@@ -1,0 +1,294 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a XeLaTeX document using the "article" class,
+% with the fontspec package to easily select fonts.
+
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
+\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
+\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
+\usepackage{xltxtra} % Extra customizations for XeLaTeX
+\defaultfontfeatures{Ligatures=TeX}
+
+\usepackage{booktabs}
+\usepackage{siunitx}
+
+\usepackage{amsmath}
+
+\usepackage{unicode-math}
+\setmathfont{Cambria Math}
+%\setmathfont{Lucida Math Std}
+%\setmathfont{Asana Math}
+%\setmathfont{Berenis ADF Pro Math}
+%\setmathfont{TeX Gyre Schola Math}
+%\setmathfont{TeX Gyre Pagella Math}
+%\setmathfont{DejaVu Math TeX Gyre}
+%\setmathfont{STIX Math}
+% TeX Gyre Bonum Math
+% TeX Gyre Termes Math
+% TeX Gyre DejaVu Math
+
+\setmainfont{Minion Pro} % set the main body font (\textrm), assumes Charis SIL is installed
+\setsansfont{Myriad Pro}
+%\setmonofont{Deja Vu Mono}
+%\setmonofont{Courier Std}
+\setmonofont{Source Code Pro}
+%Inconsolata
+%Noto Mono
+%Ubuntu Mono
+%Liberation Mono
+%Nimbus Mono
+
+% other LaTeX packages.....
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\title{Cyber Intelligence: A Survey}
+\author{Mohd Zamri Murah\\
+\small{Cyber Intelligence Lab, Center for Cybersecurity}\\
+\small{Universiti Kebangsaan Malaysia}}
+\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\usepackage{natbib}
+
+% remove & in bib style
+%\renewcommand{\bibfont}{\SingleSpacing}
+\setlength{\bibsep}{\baselineskip}
+\setlength{\bibhang}{10.5mm}
+\setcitestyle{aysep={}}
+
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+
+\begin{document}
+
+\nocite{*}
+
+\maketitle
+
+%\section{}
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin auctor nisl, in
+dictum tortor blandit eu. Pellentesque a nisi non ipsum bibendum egestas eget quis libero. Maecenas
+sagittis tortor et augue sagittis, eget convallis augue cursus. Quisque purus odio, feugiat nec
+tincidunt sit amet, hendrerit sed tellus. Donec vulputate sapien sed placerat suscipit. Suspendisse
+turpis orci, cursus congue dui nec, porttitor viverra augue. Donec et consequat enim, eget rutrum
+tortor. Cras tortor elit, interdum vitae risus vel, consequat bibendum elit. Sed a convallis arcu.
+\end{abstract}
+
+\section{Aliquam}
+
+
+Aliquam facilisis sit amet est viverra varius. Nunc pharetra consequat erat, eget volutpat nisi
+blandit nec. Duis convallis ligula quis purus venenatis, eget volutpat ex faucibus. Fusce eu suscipit
+elit. Quisque et est sit amet odio scelerisque tincidunt quis sit amet ex. Suspendisse interdum
+pulvinar ex eu ullamcorper. Sed vel dui vel lorem pellentesque pellentesque. Fusce ac vehicula ex.
+Morbi at turpis a lorem congue faucibus quis sodales risus. Nam auctor purus consequat, dictum justo
+eget, aliquam risus. Morbi ultricies quis elit in egestas. Donec nibh dolor, aliquet quis feugiat non,
+lacinia vel magna. Vivamus imperdiet nisl sit amet odio condimentum, nec ornare lorem posuere. In
+porttitor lacinia massa sit amet luctus.
+
+Aenean non blandit quam. Sed id arcu hendrerit, finibus tellus et, efficitur ipsum. Nam faucibus leo
+quis dolor iaculis scelerisque. Vestibulum sit amet fringilla libero. Suspendisse nec hendrerit purus,
+ut rutrum augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+mus. Morbi id dolor placerat, consectetur metus eget, ullamcorper sem. Sed consequat faucibus enim
+eget tincidunt. Quisque faucibus rutrum felis, id aliquet metus suscipit a.
+
+Quisque sollicitudin, neque quis facilisis lacinia, sapien magna rutrum leo, nec varius enim enim ut
+urna. Nam congue metus nisi, ac laoreet turpis aliquam vel. Sed vehicula metus ut ex interdum
+consectetur. Praesent rutrum ex in leo pretium, ut consequat orci sodales. Fusce sapien orci, molestie
+nec tristique et, mattis sed nulla. Vivamus ut lectus id est condimentum mattis a in ante. Morbi ut
+nulla vehicula, rutrum elit vel, hendrerit neque. Ut sed hendrerit mauris. Curabitur augue sem,
+pulvinar eu magna vitae, aliquam aliquam augue. Nunc suscipit at diam bibendum imperdiet. Nam quis
+blandit nisl, id sodales quam. Quisque pharetra, quam vel molestie eleifend, augue leo ultrices arcu,
+a volutpat dolor odio quis purus.
+
+Nam eu lobortis risus. Quisque malesuada feugiat magna efficitur mattis. In hac habitasse platea
+dictumst. Quisque porta pharetra sollicitudin. Aenean posuere cursus luctus. Morbi varius, nisi sit
+amet blandit rhoncus, sem elit euismod risus, id volutpat lacus neque eget massa. Nunc ut venenatis
+augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer
+ultricies felis et pharetra imperdiet. Donec eu rutrum turpis. Etiam lobortis posuere nisl ac
+facilisis. Cras ligula odio, maximus vitae ligula in, lacinia accumsan justo. In ut sapien sed ligula
+mollis facilisis. Praesent mollis fringilla metus non malesuada.
+breaklines=true
+\section{In vehicula}
+
+In vehicula, neque ut vehicula cursus, neque lacus viverra enim, quis fringilla ipsum magna non dui.
+Quisque pharetra velit sapien, eget fringilla risus congue tristique. Suspendisse id aliquam ipsum,
+non vestibulum arcu. Nullam aliquet semper porta. Duis vulputate porttitor dui in pellentesque.
+Suspendisse dolor massa, iaculis id congue nec, eleifend ullamcorper felis. Nullam molestie auctor
+nulla, in pulvinar nunc lacinia et. Ut iaculis accumsan lacus eu iaculis. In pulvinar lacinia
+volutpat. Mauris vel arcu non erat suscipit pharetra ut porta erat. Aliquam interdum nisi est, eget
+convallis ipsum laoreet vitae. Integer turpis ipsum, condimentum eget nibh nec, porta porttitor nisl.
+
+In scelerisque lorem ac accumsan pretium. Etiam vehicula ante odio, sit amet commodo nunc sollicitudin
+a. Etiam finibus tempor ex ut dignissim. Fusce maximus massa a ex ornare tempor id gravida ipsum.
+Mauris dictum lectus a eros facilisis, sed vulputate felis fermentum. Morbi quis leo pulvinar, iaculis
+nibh nec, vulputate tellus. Duis sagittis quis nisi eu venenatis. Etiam mattis semper leo sit amet
+condimentum.
+
+Etiam vitae porta tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Vestibulum augue turpis, lobortis et erat ac, sollicitudin pellentesque arcu. Donec
+quis neque sed nibh tristique ultrices. Cras finibus vehicula metus, ac pellentesque magna iaculis ut.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in nisi tortor. Vestibulum placerat nisi
+a semper pharetra. Sed id elit commodo, vehicula sem sit amet, euismod elit. Suspendisse elit ex,
+convallis sit amet pharetra ut, ultricies ac velit. Vivamus ultrices porta lorem, nec blandit justo
+ornare sit amet. Suspendisse augue neque, tincidunt vitae rhoncus in, euismod eget velit. Suspendisse
+quis odio scelerisque, volutpat urna a, volutpat tortor.
+
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse
+scelerisque lorem augue, id accumsan tortor accumsan a. Sed non fringilla ar
+
+\begin{table}
+\centering
+\caption{Hello World}
+\begin{tabular}{SSSSSSSS} \toprule
+    {$m$} & {$\Re\{\underline{{X}}(m)\}$} & {$-\Im\{\underline{{X}}(m)\}$} & {${X}(m)$} & {$\frac{{X}(m)}{23}$} & {$A_m$} & {$\varphi(m)\ /\ ^{\circ}$} & {$\varphi_m\ /\ ^{\circ}$} \\ \midrule
+    1  & 16.128 & +8.872 & 16.128 & 1.402 & 1.373 & -146.6 & -137.6 \\
+    2  & 3.442  & -2.509 & 3.442  & 0.299 & 0.343 & 133.2  & 152.4  \\
+    3  & 1.826  & -0.363 & 1.826  & 0.159 & 0.119 & 168.5  & -161.1 \\
+    4  & 0.993  & -0.429 & 0.993  & 0.086 & 0.08  & 25.6   & 90     \\ \midrule
+    5  & 1.29   & +0.099 & 1.29   & 0.112 & 0.097 & -175.6 & -114.7 \\
+    6  & 0.483  & -0.183 & 0.483  & 0.042 & 0.063 & 22.3   & 122.5  \\
+    7  & 0.766  & -0.475 & 0.766  & 0.067 & 0.039 & 141.6  & -122   \\
+    8  & 0.624  & +0.365 & 0.624  & 0.054 & 0.04  & -35.7  & 90     \\ \midrule
+    9  & 0.641  & -0.466 & 0.641  & 0.056 & 0.045 & 133.3  & -106.3 \\
+    10 & 0.45   & +0.421 & 0.45   & 0.039 & 0.034 & -69.4  & 110.9  \\
+    11 & 0.598  & -0.597 & 0.598  & 0.052 & 0.025 & 92.3   & -109.3 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+cu. Maecenas auctor nunc at efficitur pulvinar. Duis condimentum maximus tortor in maximus. Curabitur consectetur arcu sed dui molestie fringilla. Proin aliquet, mi eu eleifend scelerisque, arcu est viverra erat, sed iaculis purus sapien vitae mi. Vestibulum sed condimentum augue.
+
+Ut id enim quis urna ultrices placerat at ut nunc. Sed diam ex, tristique ut feugiat fringilla, placerat cursus ipsum. Ut vitae metus at purus cursus semper eget et felis. Nulla ut aliquet dui, a sodales leo. Aliquam id rhoncus leo. Integer blandit odio at eros vulputate dapibus. Phasellus vel accumsan arcu. Sed eu fringilla nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse efficitur sagittis nisi, ut dapibus ex.
+
+\begin{equation}\label{e:barwq}\begin{split}
+H_c&=\frac{1}{2n} \sum^n_{l=0}(-1)^{l}(n-{l})^{p-2}
+\sum_{l _1+\dots+ l _p=l}\prod^p_{i=1} \binom{n_i}{l _i}\\
+&\quad\cdot[(n-l )-(n_i-l _i)]^{n_i-l _i}\cdot
+\Bigl[(n-l )^2-\sum^p_{j=1}(n_i-l _i)^2\Bigr].
+\end{split}\end{equation}
+
+mono fonts.
+\texttt{
+Sed vulputate eros nec nisl mattis finibus. Quisque dolor purus, rhoncus non diam eu, interdum
+sagittis odio. Aliquam sollicitudin pharetra neque in varius. Sed augue velit, lobortis id mauris a,
+ornare eleifend nibh. Vivamus ac purus nec nisi ullamcorper mattis a in magna. Nam ut justo egestas,
+blandit ligula vitae, vestibulum est. Praesent est dolor, blandit ut aliquam a, congue sit amet magna.
+Donec pretium lectus id purus cursus, quis}
+
+{\ttfamily pulvinar diam aliquam. Nunc vel dolor lectus. Suspendisse potenti. Nulla facilisi. Cras
+facilisis vestibulum quam, id gravida velit porta in. Class aptent taciti sociosqu ad litora torquent
+per conubia nostra, per inceptos himenaeos. Nunc porta commodo dolor sit amet auctor. Vivamus id
+mollis mi, eu consectetur velit. Suspendisse laoreet diam non metus luctus, in placerat mauris
+ultricies.
+}
+
+san serif. \textsf{ ed vulputate eros nec nisl mattis finibus. Quisque dolor purus, rhoncus non diam
+eu, interdum sagittis odio. Aliquam sollicitudin pharetra neque in varius. Sed augue velit, lobortis
+id mauris a, ornare eleifend nibh. Vivamus ac purus nec nisi ullamcorper mattis a in magna. Nam ut
+justo egestas, blandit ligula vitae, vestibulum est. Praesent est dolor, blandit ut aliquam a, congue
+sit amet magna. Donec pretium lectus id purus cursus, quis}
+
+
+{\sffamily ed vulputate eros nec nisl mattis finibus. Quisque dolor purus, rhoncus non diam eu,
+interdum sagittis odio. Aliquam sollicitudin pharetra neque in varius. Sed augue velit, lobortis id
+mauris a, ornare eleifend nibh. Vivamus ac purus nec nisi ullamcorper mattis a in magna. Nam ut justo
+egestas, blandit ligula vitae, vestibulum est. Praesent est dolor, blandit ut aliquam a, congue sit
+amet magna. Donec pretium lectus id purus cursus, quis}
+
+\section{Quisque quis massa}
+
+Nulla vulputate, odio eget sagittis convallis, mi nisi consectetur metus, sit amet consequat nulla
+arcu at nibh. Donec fringilla dictum lobortis. Integer dignissim quis velit eget eleme
+
+ntum. Integer convallis ipsum eros, eget tincidunt nisl consequat quis. Quisque vitae nulla quis quam
+ornare feugiat. Etiam ac luctus quam. Duis libero nunc, interdum eu rutrum nec, ullamcorper at metus.
+
+Quisque quis massa in velit pharetra maximus. Duis dignissim condimentum eros, aliquet malesuada nisi
+consequat in. Suspendisse congue mollis nunc quis ullamcorper. Nunc accumsan ullamcorper mi vitae
+aliquet. Sed ipsum risus, consequat id urna in, iaculis bibendum metus. Sed viverra lorem ac ante
+sollicitudin pulvinar. Sed id sapien a lorem malesuada laoreet. Etiam scelerisque molestie purus, in
+sodales diam blandit vitae. Proin mollis turpis non turpis tincidunt malesuada. Etiam sed fringilla
+turpis.
+
+\begin{lstlisting}[language=Python, caption=Python example]
+import numpy as np
+    
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+    
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1) 
+
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+                
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
+                
+                VT = np.zeros((n*m,1), int)
+    
+    return M
+\end{lstlisting}
+
+Suspendisse accumsan eleifend sapien, quis vestibulum mauris volutpat nec. Sed consectetur dui est,
+non efficitur turpis finibus sed. Praesent non interdum nisl, at feugiat nulla. Aenean vel pulvinar
+enim, pretium tempor quam. Donec tempor tincidunt diam a commodo. Ut bibendum facilisis mollis. Duis
+suscipit euismod eleifend. Nam et nulla et nulla ultricies volutpat non id orci. Etiam pharetra mauris
+vel placerat tincidunt. In consequat ligula augue, nec porta enim consectetur et. Integer accumsan
+efficitur orci.
+
+Sed pharetra est non pulvinar tristique. Proin rhoncus scelerisque risus, sed tempus ipsum consectetur
+a. Etiam viverra non ex nec malesuada. In in consequat neque. Nulla eleifend rhoncus odio vel
+interdum. Integer interdum eros id nisl aliquet vestibulum. Donec efficitur, velit venenatis pharetra
+lacinia, turpis nulla venenatis nunc, vitae auctor turpis lacus a massa. Ut elementum, enim quis
+bibendum rutrum, magna nisi ornare justo, sed convallis ipsum magna at ante. Class aptent taciti
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur semper ligula
+euismod mi auctor, quis ultricies libero iaculis. Donec in fermentum massa. Class aptent taciti
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque malesuada
+facilisis neque. Vestibulum mollis nisl ac risus blandit, nec pretium mauris porttitor.
+
+\section{Math}
+
+
+\begin{equation*}
+\left.\begin{aligned}
+B’&=-\partial\times E,\\
+E’&=\partial\times B - 4\pi j,
+\end{aligned}
+\right\}
+\qquad \text{Maxwell’s equations}
+\end{equation*}
+%\subsection{}
+
+\[
+P_{r-j}=\begin{cases}
+0& \text{if $r-j$ is odd},\\
+r!\,(-1)^{(r-j)/2}& \text{if $r-j$ is even}.
+\end{cases}
+\]
+
+\bibliography{sample-GayaUKM}
+\bibliographystyle{GayaUKM-article}
+
+\end{document}
